@@ -1,0 +1,16 @@
+<main>
+    <h1>Войти</h1>
+    <div class="form-group">
+        <label for="input-username">Логин или электронная почта</label>
+        <input id="input-username" name="username" [(ngModel)]="username" />
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="input-password">Пароль</label>
+        <input id="input-password" name="password" type="password" [(ngModel)]="password" class="form-control">
+    </div>
+    <button class="submit button" (click)="login()">Войти</button>
+    <div class="alternative">
+        <a routerLink="/signup">Регистрация</a>
+        <a routerLink="/reset_password">Сброс пароля</a>
+    </div>
+</main>

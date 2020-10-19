@@ -1,0 +1,14 @@
+<header>
+    <div class="title-nav">
+        <a class="title" routerLink="/">chess100<span>.com</span></a>
+        <nav>
+            <a (click)="play()">Играть</a>
+            <a href="#">Смотреть</a>
+            <a href="#">Правила</a>
+        </nav>
+    </div>
+    <div class="buttons">
+        <a routerLink="/login" *ngIf="!authService.isAuthorized">Войти</a>
+        <a routerLink="/profile" *ngIf="authService.isAuthorized">{{authService.currentUser.username}}</a>
+    </div>
+</header>
